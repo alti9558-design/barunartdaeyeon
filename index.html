@@ -112,7 +112,31 @@
 @media(min-width:1024px){ .hero-mini-keywords{max-width:720px} .hero-mini-keywords span{font-size:13px;padding:7px 13px}
 }
 @media(max-width:640px){ .hero-mini-keywords{gap:8px} .hero-mini-keywords span{font-size:12px;padding:7px 11px;min-height:34px}
-} </style>
+} 
+/* 모바일 전화 상담 버튼은 투명하지 않게 고정 */
+@media(max-width:640px){
+  .hero-actions a[href^="tel:"],
+  .actions a[href^="tel:"],
+  a.btn[href^="tel:"]{
+    background:var(--orange)!important;
+    color:#fff!important;
+    border-color:var(--orange)!important;
+    box-shadow:0 14px 32px rgba(245,124,0,.28)!important;
+    opacity:1!important;
+  }
+  .mobile-call,
+  .floating-call,
+  .bottom-call,
+  .fixed-call,
+  .mobile-cta a[href^="tel:"]{
+    background:var(--orange)!important;
+    color:#fff!important;
+    border-color:var(--orange)!important;
+    opacity:1!important;
+  }
+}
+
+</style>
 </head>
 <body>
 <header class="topbar">
@@ -128,7 +152,7 @@
 <div>
 <p class="label">부산 남구 대연동 예중·예고 입시미술</p>
 <h1 id="hero-title"><span class="hero-small-title">예중·예고 입시</span><br/><strong>꿈을 이루는<br/>바른 가르침</strong><br/><span class="hero-brand-title">압구정바른미술학원</span></h1>
-<div class="hero-mini-keywords" aria-label="대표 키워드"> <span>예중·예고 전문</span> <span>원장직강</span> <span>소수정예 맞춤수업</span> <span>취미반 별도 운영</span>
+<div class="hero-mini-keywords" aria-label="대표 키워드"> <span>예중·예고 전문</span> <span>원장직강</span> <span>취미반 별도 운영</span>
 </div> <div class="hero-actions">
 <a class="btn btn-orange" href="tel:051-631-7942">전화 상담하기</a>
 <a class="btn btn-blue" href="https://naver.me/FRcdEDcN" rel="noopener" target="_blank">네이버 플레이스</a>
@@ -146,7 +170,7 @@
 <div>
 <p class="label blue">합격 결과 하이라이트</p>
 <h2 id="result-title">결과로 증명하는 예중·예고 입시미술</h2>
-<p class="lead">예중·예고 입시 맞춤 지도<br/>소수정예 원장직강</p>
+<p class="lead">예중·예고 입시 맞춤 지도<br/>정성훈 원장 직강</p>
 <div class="actions">
 </div>
 </div>
