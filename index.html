@@ -1,4 +1,6 @@
-<!DOCTYPE html> <html lang="ko">
+<!DOCTYPE html>
+
+<html lang="ko">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -136,23 +138,128 @@
   }
 }
 
+
+/* 프로그램 카드 본문 글씨가 흰색으로 묻히지 않게 고정 */
+.program-card p,
+.program-card-text-fix{
+  color:var(--ink)!important;
+  opacity:1!important;
+}
+.program-card h3{
+  color:var(--ink)!important;
+}
+.program-card span{
+  color:var(--orange)!important;
+}
+
+
+/* 상단 '바' 텍스트를 원형 로고 이미지로 교체 */
+.brand{
+  gap:12px!important;
+}
+.brand-mark-image{
+  width:44px!important;
+  height:44px!important;
+  border-radius:50%!important;
+  background:#fff!important;
+  padding:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+  box-shadow:none!important;
+}
+.brand-mark-image img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  display:block!important;
+  border-radius:50%!important;
+}
+@media (max-width: 768px){
+  .brand-mark-image{
+    width:38px!important;
+    height:38px!important;
+  }
+}
+
+/* 2026-08-05 final text/color fix */
+.program-card span{
+  display:inline-grid !important;
+  place-items:center !important;
+  width:52px !important;
+  height:52px !important;
+  border-radius:16px !important;
+  background:var(--blue) !important;
+  color:#fff !important;
+  font-weight:950 !important;
+  margin-bottom:16px !important;
+  box-shadow:none !important;
+}
+.program-card h3{
+  color:var(--ink) !important;
+}
+.program-card p{
+  color:var(--muted) !important;
+}
+.gifted-keywords{
+  color:#111 !important;
+}
+
+/* 2026-08-05 program photo and copy update */
+.program-photo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  max-width:860px;
+  margin:24px auto 28px;
+  align-items:start;
+}
+.program-photo-grid .photo-card{
+  margin:0;
+  width:100%;
+  overflow:hidden;
+}
+.program-photo-grid .photo-card img{
+  width:100%;
+  aspect-ratio:4 / 3;
+  object-fit:cover;
+  display:block;
+}
+.program-sunflower-photo figcaption,
+.program-exam-photo figcaption{
+  padding:12px 16px;
+  text-align:center;
+  font-size:15px;
+  font-weight:800;
+  color:var(--blue);
+  letter-spacing:-.04em;
+}
+@media (max-width: 900px){
+  .program-photo-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+    max-width:100%;
+  }
+}
+
 </style>
 </head>
 <body>
 <header class="topbar">
 <div class="container nav">
-<a aria-label="압구정바른미술학원 부산대연캠퍼스 홈" class="brand" href="#top"><span class="brand-mark">바</span><span>압구정바른미술학원</span></a>
+<a aria-label="압구정바른미술학원 부산대연캠퍼스 홈" class="brand" href="#top"><span class="brand-mark brand-mark-image"><img alt="바른미술학원 로고" src="assets/barun-circle-logo.png"/></span><span>압구정바른미술학원</span></a>
 <nav aria-label="상단 메뉴" class="nav-links"><a href="#result">총 112명 합격</a>
 <a href="#exam">입시분석</a><a href="#works">재현작</a><a href="#director">원장직강</a><a href="#program">프로그램</a><a href="#location">위치</a><a class="nav-cta" href="tel:051-631-7942">상담 전화</a>
 </nav>
 </div>
 </header>
 <main id="top">
-<section aria-labelledby="hero-title" class="hero"> <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true"> <source src="assets/hero-video.mp4" type="video/mp4"> </video> <div class="hero-bg-overlay" aria-hidden="true"></div> <div class="container hero-grid">
+<section aria-labelledby="hero-title" class="hero"> <video aria-hidden="true" autoplay="" class="hero-bg-video" loop="" muted="" playsinline="" preload="auto"> <source src="assets/hero-video.mp4" type="video/mp4"/> </video> <div aria-hidden="true" class="hero-bg-overlay"></div> <div class="container hero-grid">
 <div>
 <p class="label">부산 남구 대연동 예중·예고 입시미술</p>
 <h1 id="hero-title"><span class="hero-small-title">예중·예고 입시</span><br/><strong>꿈을 이루는<br/>바른 가르침</strong><br/><span class="hero-brand-title">압구정바른미술학원</span></h1>
-<div class="hero-mini-keywords" aria-label="대표 키워드"> <span>예중·예고 전문</span> <span>원장직강</span> <span>취미반 별도 운영</span>
+<div aria-label="대표 키워드" class="hero-mini-keywords"> <span>예중·예고 전문</span> <span>원장직강</span> <span>취미반 별도 운영</span>
 </div> <div class="hero-actions">
 <a class="btn btn-orange" href="tel:051-631-7942">전화 상담하기</a>
 <a class="btn btn-blue" href="https://naver.me/FRcdEDcN" rel="noopener" target="_blank">네이버 플레이스</a>
@@ -188,7 +295,7 @@
 <div class="container">
 <div class="head">
 <p class="label">출제주제 재현작</p>
-<h2 id="works-title">예중·예고 입시 재현작</h2> </div> <div class="work-grid reproduction-clean-grid"> <figure class="work-card"> <img src="assets/reproduction-work01.jpg" alt="2025 부산예술중학교 재현작" loading="lazy"> <figcaption><b>2025 부산예술중학교 재현작</b></figcaption> </figure> <figure class="work-card"> <img src="assets/reproduction-work02.jpg" alt="2025 브니엘예술중학교 재현작" loading="lazy"> <figcaption><b>2025 브니엘예술중학교 재현작</b></figcaption> </figure> <figure class="work-card"> <img src="assets/reproduction-work03.jpg" alt="2025 부산예술고등학교 재현작" loading="lazy"> <figcaption><b>2025 부산예술고등학교 재현작</b></figcaption> </figure> <figure class="work-card"> <img src="assets/reproduction-work04.jpg" alt="2025 브니엘예술고등학교 재현작" loading="lazy"> <figcaption><b>2025 브니엘예술고등학교 재현작</b></figcaption> </figure> <figure class="work-card"> <img src="assets/reproduction-work05.jpg" alt="2025 한국조형예술고등학교 재현작" loading="lazy"> <figcaption><b>2025 한국조형예술고등학교 재현작</b></figcaption> </figure> <figure class="work-card"> <img src="assets/reproduction-work06.jpg" alt="2024 한국조형예술고등학교 재현작" loading="lazy"> <figcaption><b>2024 한국조형예술고등학교 재현작</b></figcaption> </figure>
+<h2 id="works-title">예중·예고 입시 재현작</h2> </div> <div class="work-grid reproduction-clean-grid"> <figure class="work-card"> <img alt="2025 부산예술중학교 재현작" loading="lazy" src="assets/reproduction-work01.jpg"/> <figcaption><b>2025 부산예술중학교 재현작</b></figcaption> </figure> <figure class="work-card"> <img alt="2025 브니엘예술중학교 재현작" loading="lazy" src="assets/reproduction-work02.jpg"/> <figcaption><b>2025 브니엘예술중학교 재현작</b></figcaption> </figure> <figure class="work-card"> <img alt="2025 부산예술고등학교 재현작" loading="lazy" src="assets/reproduction-work03.jpg"/> <figcaption><b>2025 부산예술고등학교 재현작</b></figcaption> </figure> <figure class="work-card"> <img alt="2025 브니엘예술고등학교 재현작" loading="lazy" src="assets/reproduction-work04.jpg"/> <figcaption><b>2025 브니엘예술고등학교 재현작</b></figcaption> </figure> <figure class="work-card"> <img alt="2025 한국조형예술고등학교 재현작" loading="lazy" src="assets/reproduction-work05.jpg"/> <figcaption><b>2025 한국조형예술고등학교 재현작</b></figcaption> </figure> <figure class="work-card"> <img alt="2024 한국조형예술고등학교 재현작" loading="lazy" src="assets/reproduction-work06.jpg"/> <figcaption><b>2024 한국조형예술고등학교 재현작</b></figcaption> </figure>
 </div>
 </div>
 </section>
@@ -235,11 +342,21 @@
 </div>
 </article>
 </div>
-</div> <section class="section barun-news-section" id="barun-news" aria-labelledby="barun-news-title"> <div class="container"> <div class="head centered-head"> <p class="label blue">BARUN NEWS</p> <h2 id="barun-news-title">예중·예고 입시와 수업 소식을 담은 바른 신문</h2> </div> <div class="barun-news-grid"> <figure><img src="assets/barun-news-01.jpg" alt="바른신문 36호 표지" loading="lazy"/></figure> <figure><img src="assets/barun-news-02.jpg" alt="바른신문 36호 캠퍼스 행사" loading="lazy"/></figure> <figure><img src="assets/barun-news-03.jpg" alt="바른신문 36호 수상 소식과 전시 소식" loading="lazy"/></figure> <figure><img src="assets/barun-news-04.jpg" alt="바른신문 36호 전시 소개와 추천 도서" loading="lazy"/></figure> </div> </div>
-</section> </section> <section aria-labelledby="director-title" class="section sky" id="director"> <div class="container"> <div class="head"> <p class="label blue">원장 직강</p> <h2 id="director-title">예중·예고 입시 전문</h2> <p class="director-subtitle">압구정바른미술학원 정성훈 원장</p> <p class="lead">입시 경력 28년, 학생별 맞춤 지도</p> </div> <div class="director-name-card"><span>원장</span>정성훈 원장</div> <div class="director-box"> <figure class="photo-card"><img alt="압구정바른미술학원 부산대연캠퍼스 정성훈 원장" loading="lazy" src="assets/director-main.jpg"/></figure> <div class="card"> <h3>예중·예고 입시 지도</h3> <div class="feature-list"> <div class="feature"><i>1</i><div><b>입시 경력 28년</b><p>예중·예고 준비 방향 안내</p></div></div> <div class="feature"><i>2</i><div><b>소수정예 맞춤 수업</b><p>학생별 1:1 피드백</p></div></div> <div class="feature"><i>3</i><div><b>입시미술부터 취미미술까지</b><p>목표에 맞춘 직접 지도</p></div></div> </div> </div> </div> </div>
+</div> <section aria-labelledby="barun-news-title" class="section barun-news-section" id="barun-news"> <div class="container"> <div class="head centered-head"> <p class="label blue">BARUN NEWS</p> <h2 id="barun-news-title">예중·예고 입시와 수업 소식을 담은 바른 신문</h2> </div> <div class="barun-news-grid"> <figure><img alt="바른신문 36호 표지" loading="lazy" src="assets/barun-news-01.jpg"/></figure> <figure><img alt="바른신문 36호 캠퍼스 행사" loading="lazy" src="assets/barun-news-02.jpg"/></figure> <figure><img alt="바른신문 36호 수상 소식과 전시 소식" loading="lazy" src="assets/barun-news-03.jpg"/></figure> <figure><img alt="바른신문 36호 전시 소개와 추천 도서" loading="lazy" src="assets/barun-news-04.jpg"/></figure> </div> </div>
+</section> </section> <section aria-labelledby="director-title" class="section sky" id="director"> <div class="container"> <div class="head"> <p class="label blue">원장 직강</p> <h2 id="director-title">예중·예고 입시 전문</h2> <p class="director-subtitle">압구정바른미술학원 정성훈 원장</p> <p class="lead">입시 경력 28년, 학생별 맞춤 지도</p> </div> <div class="director-name-card"><span>원장</span>정성훈 원장</div> <div class="director-box"> <figure class="photo-card"><img alt="압구정바른미술학원 부산대연캠퍼스 정성훈 원장" loading="lazy" src="assets/director-main.jpg"/></figure> <div class="card"> <h3>예중·예고 입시 지도</h3> <div class="feature-list"> <div class="feature"><i>1</i><div><b>입시 경력 28년</b><p>예중·예고 준비 방향 안내</p></div></div> <div class="feature"><i>2</i><div><b>소수정예 맞춤 수업</b><p>학생별 1:1 피드백</p></div></div> <div class="feature"><i>3</i><div><b>취미미술부터 입시미술까지</b><p>목표에 맞춘 직접 지도</p></div></div> </div> </div> </div> </div>
 </section> <section aria-labelledby="standard-title" class="section" id="standard"> <div class="container"> <div class="head centered-head"> <p class="label blue">실기 기준</p> <h2 id="standard-title">원장이 직접 보여주는 입시 실기 기준</h2> </div> <figure class="photo-card standard-main-photo"> <img alt="주전자 1시간 공개시범작" loading="lazy" src="assets/director-drawing01.jpg"/> <figcaption>주전자 1시간 공개시범작</figcaption> </figure> <p class="standard-keywords">관찰력 · 형태감 · 명암 · 질감 표현<br/>원장직강 · 1:1 피드백</p> </div>
-</section> <section aria-labelledby="gifted-title" class="section orange" id="gifted"> <div class="container"> <div class="head centered-head"> <p class="label">영재교육원 준비</p> <h2 id="gifted-title">체계적인 부산대예술영재교육원 준비</h2> </div> <figure class="photo-card gifted-main-photo"> <img alt="부산대예술영재교육원 미술 전형 준비 안내 자료" loading="lazy" src="assets/gifted-info01.png"/> </figure> <p class="gifted-keywords">창의표현과 관찰표현 중심 교육</p> </div>
-</section> <section aria-labelledby="program-title" class="section" id="program"> <div class="container"> <div class="head"> <p class="label blue">수업 프로그램</p> <h2 id="program-title">예중·예고 입시부터 취미미술까지</h2> <p class="lead program-one-line">목표 학교 · 현재 실력 · 준비 기간에 맞춘 수업 방향 안내</p> </div> <figure class="photo-card program-sunflower-photo"> <img alt="해바라기 정물 수채화 수업 풍경" loading="lazy" src="assets/class-sunflower-easel.jpg"/> <figcaption>해바라기 수업 풍경</figcaption> </figure> <div class="program-grid"> <article class="program-card"><span>01</span><h3>예중·예고 준비반</h3><p>목표 학교별 실기유형에 맞춘 실기 교육</p></article> <article class="program-card"><span>02</span><h3>부산대예술영재교육원</h3><p>창의표현과 관찰표현 중심 교육</p></article> <article class="program-card"><span>03</span><h3>취미미술</h3><p>개인 수준에 맞춘 취미미술 교육</p></article> </div> </div>
+</section> <section aria-labelledby="gifted-title" class="section orange" id="gifted"> <div class="container"> <div class="head centered-head"> <p class="label">영재교육원 준비</p> <h2 id="gifted-title">체계적인 부산대예술영재교육원 준비</h2> </div> <figure class="photo-card gifted-main-photo"> <img alt="부산대예술영재교육원 미술 전형 준비 안내 자료" loading="lazy" src="assets/gifted-info01.png"/> </figure> <p class="gifted-keywords" style="color:#111 !important;">창의표현과 관찰표현 중심 교육</p> </div>
+</section> <section aria-labelledby="program-title" class="section" id="program"> <div class="container"> <div class="head"> <p class="label blue">수업 프로그램</p> <h2 id="program-title">취미 미술에서 예중·예고 입시까지</h2> <p class="lead program-one-line">목표 학교 · 현재 실력 · 준비 기간에 맞춘 수업 방향 안내</p> </div>  <div class="program-photo-grid">
+  <figure class="photo-card program-sunflower-photo">
+    <img src="assets/class-sunflower-easel.jpg" loading="lazy" alt="해바라기 정물 수채화 수업 풍경">
+    <figcaption>해바라기 수업 풍경</figcaption>
+  </figure>
+  <figure class="photo-card program-exam-photo">
+    <img src="assets/program-exam-class.jpg" loading="lazy" alt="입시미술 실기 수업 현장">
+    <figcaption>입시미술 수업 현장</figcaption>
+  </figure>
+</div>
+<div class="program-grid"> <article class="program-card"><span>01</span><h3>예중·예고 준비반</h3><p>목표 학교별 실기유형에 맞춘 실기 교육</p></article> <article class="program-card"><span>02</span><h3>부산대예술영재교육원</h3><p class="program-card-text-fix">창의표현과 관찰표현 중심 교육</p></article> <article class="program-card"><span>03</span><h3>취미미술</h3><p>개인 수준에 맞춘 취미미술 교육</p></article> </div> </div>
 </section> <section aria-labelledby="review-title" class="section">
 <div class="container">
 <div class="head">
