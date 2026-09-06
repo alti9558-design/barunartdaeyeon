@@ -243,6 +243,93 @@
   }
 }
 
+
+
+
+
+/* 바른신문 제37호 레이아웃 개선 */
+.news-issue-37{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  margin-top:30px;
+  align-items:start;
+}
+.news-issue-37 figure{
+  margin:0;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 16px 42px rgba(17,24,39,.08);
+}
+.news-issue-37 figure:first-child{
+  grid-column:1 / -1;
+}
+.news-issue-37 img{
+  width:100%;
+  height:auto;
+  display:block;
+  background:#fff;
+}
+@media(max-width:900px){
+  .news-issue-37{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  .news-issue-37 figure:first-child{
+    grid-column:auto;
+  }
+}
+
+
+/* 바른신문 제37호 추가 정리 */
+.barun-news-section{
+  padding-top:96px;
+  padding-bottom:96px;
+}
+.barun-news-section .head{
+  margin-bottom:26px;
+}
+.news-issue-37{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:22px;
+  row-gap:22px;
+  margin-top:30px;
+  align-items:start;
+}
+.news-issue-37 figure{
+  margin:0;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 16px 42px rgba(17,24,39,.08);
+}
+.news-issue-37 figure:first-child{
+  grid-column:1 / -1;
+  width:min(100%, 980px);
+  justify-self:center;
+}
+@media(max-width:900px){
+  .barun-news-section{
+    padding-top:72px;
+    padding-bottom:72px;
+  }
+  .barun-news-section .head{
+    margin-bottom:20px;
+  }
+  .news-issue-37{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  .news-issue-37 figure:first-child{
+    width:100%;
+    grid-column:auto;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -342,8 +429,26 @@
 </div>
 </article>
 </div>
-</div> <section aria-labelledby="barun-news-title" class="section barun-news-section" id="barun-news"> <div class="container"> <div class="head centered-head"> <p class="label blue">BARUN NEWS</p> <h2 id="barun-news-title">예중·예고 입시와 수업 소식을 담은 바른 신문</h2> </div> <div class="barun-news-grid"> <figure><img alt="바른신문 36호 표지" loading="lazy" src="assets/barun-news-01.jpg"/></figure> <figure><img alt="바른신문 36호 캠퍼스 행사" loading="lazy" src="assets/barun-news-02.jpg"/></figure> <figure><img alt="바른신문 36호 수상 소식과 전시 소식" loading="lazy" src="assets/barun-news-03.jpg"/></figure> <figure><img alt="바른신문 36호 전시 소개와 추천 도서" loading="lazy" src="assets/barun-news-04.jpg"/></figure> </div> </div>
-</section> </section> <section aria-labelledby="director-title" class="section sky" id="director"> <div class="container"> <div class="head"> <p class="label blue">원장 직강</p> <h2 id="director-title">예중·예고 입시 전문</h2> <p class="director-subtitle">압구정바른미술학원 정성훈 원장</p> <p class="lead">입시 경력 28년, 학생별 맞춤 지도</p> </div> <div class="director-name-card"><span>원장</span>정성훈 원장</div> <div class="director-box"> <figure class="photo-card"><img alt="압구정바른미술학원 부산대연캠퍼스 정성훈 원장" loading="lazy" src="assets/director-main.jpg"/></figure> <div class="card"> <h3>예중·예고 입시 지도</h3> <div class="feature-list"> <div class="feature"><i>1</i><div><b>입시 경력 28년</b><p>예중·예고 준비 방향 안내</p></div></div> <div class="feature"><i>2</i><div><b>소수정예 맞춤 수업</b><p>학생별 1:1 피드백</p></div></div> <div class="feature"><i>3</i><div><b>취미미술부터 입시미술까지</b><p>목표에 맞춘 직접 지도</p></div></div> </div> </div> </div> </div>
+</div> 
+<section aria-labelledby="barun-news-title" class="section barun-news-section" id="barun-news">
+  <div class="container">
+    <div class="head centered-head">
+      <p class="label blue">BARUN NEWS</p>
+      <h2 id="barun-news-title">바른미술학원이 만든 월간 신문</h2>
+      <p class="lead">제37호 바른신문 소식을 확인해보세요.</p>
+    </div>
+    <div class="barun-news-grid news-issue-37">
+      <figure><img src="assets/barun-news-01.png" alt="바른신문 제37호 표지" loading="lazy"/></figure>
+      <figure><img src="assets/barun-news-02.png" alt="바른신문 제37호 캠퍼스별 행사" loading="lazy"/></figure>
+      <figure><img src="assets/barun-news-03.png" alt="바른신문 제37호 선생님 소개와 교육 칼럼" loading="lazy"/></figure>
+      <figure><img src="assets/barun-news-04.png" alt="바른신문 제37호 선생님 칼럼" loading="lazy"/></figure>
+      <figure><img src="assets/barun-news-05.png" alt="바른신문 제37호 수상 소식" loading="lazy"/></figure>
+      <figure><img src="assets/barun-news-06.png" alt="바른신문 제37호 전시 소개 1" loading="lazy"/></figure>
+      <figure><img src="assets/barun-news-07.png" alt="바른신문 제37호 전시 소개 2와 추천 도서" loading="lazy"/></figure>
+    </div>
+  </div>
+</section>
+ </section> <section aria-labelledby="director-title" class="section sky" id="director"> <div class="container"> <div class="head"> <p class="label blue">원장 직강</p> <h2 id="director-title">예중·예고 입시 전문</h2> <p class="director-subtitle">압구정바른미술학원 정성훈 원장</p> <p class="lead">입시 경력 28년, 학생별 맞춤 지도</p> </div> <div class="director-name-card"><span>원장</span>정성훈 원장</div> <div class="director-box"> <figure class="photo-card"><img alt="압구정바른미술학원 부산대연캠퍼스 정성훈 원장" loading="lazy" src="assets/director-main.jpg"/></figure> <div class="card"> <h3>예중·예고 입시 지도</h3> <div class="feature-list"> <div class="feature"><i>1</i><div><b>입시 경력 28년</b><p>예중·예고 준비 방향 안내</p></div></div> <div class="feature"><i>2</i><div><b>소수정예 맞춤 수업</b><p>학생별 1:1 피드백</p></div></div> <div class="feature"><i>3</i><div><b>취미미술부터 입시미술까지</b><p>목표에 맞춘 직접 지도</p></div></div> </div> </div> </div> </div>
 </section> <section aria-labelledby="standard-title" class="section" id="standard"> <div class="container"> <div class="head centered-head"> <p class="label blue">실기 기준</p> <h2 id="standard-title">원장이 직접 보여주는 입시 실기 기준</h2> </div> <figure class="photo-card standard-main-photo"> <img alt="주전자 1시간 공개시범작" loading="lazy" src="assets/director-drawing01.jpg"/> <figcaption>주전자 1시간 공개시범작</figcaption> </figure> <p class="standard-keywords">관찰력 · 형태감 · 명암 · 질감 표현<br/>원장직강 · 1:1 피드백</p> </div>
 </section> <section aria-labelledby="gifted-title" class="section orange" id="gifted"> <div class="container"> <div class="head centered-head"> <p class="label">영재교육원 준비</p> <h2 id="gifted-title">체계적인 부산대예술영재교육원 준비</h2> </div> <figure class="photo-card gifted-main-photo"> <img alt="부산대예술영재교육원 미술 전형 준비 안내 자료" loading="lazy" src="assets/gifted-info01.png"/> </figure> <p class="gifted-keywords" style="color:#111 !important;">창의표현과 관찰표현 중심 교육</p> </div>
 </section> <section aria-labelledby="program-title" class="section" id="program"> <div class="container"> <div class="head"> <p class="label blue">수업 프로그램</p> <h2 id="program-title">취미 미술에서 예중·예고 입시까지</h2> <p class="lead program-one-line">목표 학교 · 현재 실력 · 준비 기간에 맞춘 수업 방향 안내</p> </div>  <div class="program-photo-grid">
