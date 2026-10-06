@@ -330,6 +330,83 @@
   }
 }
 
+
+
+
+
+/* 바른신문 제38호 2열 2행 동일 배치 */
+.news-issue-38{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  margin-top:30px;
+  align-items:start;
+}
+.news-issue-38 figure,
+.news-issue-38 .news-cover{
+  margin:0;
+  width:auto!important;
+  grid-column:auto!important;
+  justify-self:stretch!important;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 16px 42px rgba(17,24,39,.08);
+}
+.news-issue-38 img{
+  width:100%;
+  height:auto;
+  display:block;
+  background:#fff;
+}
+@media(max-width:900px){
+  .news-issue-38{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+}
+
+
+/* 수상 섹션 2026 교체 */
+.award-list-clean{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  margin-top:28px;
+}
+.award-single-image figure{
+  margin:0;
+  border-radius:18px;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid var(--line);
+}
+.award-single-image img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;
+  background:#fff;
+  padding:0;
+}
+.award-list-clean .award-group h3{
+  display:block!important;
+  font-size:clamp(18px,2vw,24px);
+  line-height:1.35;
+  color:var(--blue);
+  margin:0 0 14px;
+}
+.award-list-clean .award-gallery figcaption{
+  display:none!important;
+}
+@media(max-width:900px){
+  .award-list-clean{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -386,68 +463,62 @@
 </div>
 </div>
 </section>
+
 <section aria-labelledby="awards-title" class="section sky" id="awards">
-<div class="container">
-<div class="section-head">
-<div>
-<p class="label">수상 실적</p>
-<h2 id="awards-title">공모전·실기대회 수상</h2>
-</div>
-<p class="lead">대회별 주제와 평가 기준에 맞춘 실기 준비</p>
-</div>
-<div class="award-list">
-<article class="award-group">
-<h3>2025 부산예술중학교 미술 실기대회</h3>
-<div class="award-gallery">
-<figure><img alt="2025 부산예술중학교 미술 실기대회 금상 수상 이미지" loading="lazy" src="assets/award-busan-middle-gold01.jpg"/></figure>
-<figure><img alt="2025 부산예술중학교 미술 실기대회 은상 수상 이미지" loading="lazy" src="assets/award-busan-middle-silver01.jpg"/></figure>
-</div>
-</article>
-<article class="award-group">
-<h3>KOBC 어린이 해양환경 미술 공모전</h3>
-<div class="award-gallery">
-<figure><img alt="KOBC 어린이 해양환경 미술 공모전 특선 수상 사진" loading="lazy" src="assets/award-kocean-photo01.jpg"/></figure>
-<figure><img alt="KOBC 어린이 해양환경 미술 공모전 특선 수상작" loading="lazy" src="assets/award-kocean-work01.jpg"/></figure>
-</div>
-</article>
-<article class="award-group">
-<h3>2025 브니엘예고 미술 실기대회</h3>
-<div class="award-gallery">
-<figure>
-<img alt="2025 브니엘예고 미술 실기대회 특선 수상 이미지 1" loading="lazy" src="assets/award-peniel-high-special01.jpg"/> </figure>
-<figure>
-<img alt="2025 브니엘예고 미술 실기대회 특선 수상 이미지 2" loading="lazy" src="assets/award-peniel-high-special02.jpg"/> </figure>
-</div>
-</article>
-<article class="award-group">
-<h3>청소년 조형미술 공모전</h3>
-<div class="award-gallery">
-<figure>
-<img alt="청소년 조형미술 공모전 동상 수상 이미지" loading="lazy" src="assets/award-sculpture-bronze-photo01.jpg"/> </figure>
-<figure>
-<img alt="청소년 조형미술 공모전 동상 수상작 이미지" loading="lazy" src="assets/award-sculpture-bronze-work01.jpg"/> </figure>
-</div>
-</article>
-</div>
-</div> 
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="label">수상 실적</p>
+        <h2 id="awards-title">공모전·실기대회 수상</h2>
+      </div>
+    </div>
+    <div class="award-list award-list-clean">
+      <article class="award-group award-single-image">
+        <h3>2026 부산예술중학교 미술 실기대회</h3>
+        <figure>
+          <img alt="2026 부산예술중학교 미술 실기대회 수상자 명단" loading="lazy" src="assets/award-busan-middle-2026.jpg"/>
+        </figure>
+      </article>
+      <article class="award-group award-single-image">
+        <h3>제13회 광복절 맞이 어린이 태극기 그리기 대회 대상 수상</h3>
+        <figure>
+          <img alt="제13회 광복절 맞이 어린이 태극기 그리기 대회 대상 수상 이미지" loading="lazy" src="assets/award-flag-drawing-2026.jpg"/>
+        </figure>
+      </article>
+      <article class="award-group">
+        <h3>KOBC 어린이 해양환경 미술 공모전</h3>
+        <div class="award-gallery">
+          <figure><img alt="KOBC 어린이 해양환경 미술 공모전 특선 수상 사진" loading="lazy" src="assets/award-kocean-photo01.jpg"/></figure>
+          <figure><img alt="KOBC 어린이 해양환경 미술 공모전 특선 수상작" loading="lazy" src="assets/award-kocean-work01.jpg"/></figure>
+        </div>
+      </article>
+      <article class="award-group">
+        <h3>청소년 조형미술 공모전</h3>
+        <div class="award-gallery">
+          <figure><img alt="청소년 조형미술 공모전 동상 수상 이미지" loading="lazy" src="assets/award-sculpture-bronze-photo01.jpg"/></figure>
+          <figure><img alt="청소년 조형미술 공모전 동상 수상작 이미지" loading="lazy" src="assets/award-sculpture-bronze-work01.jpg"/></figure>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section aria-labelledby="barun-news-title" class="section barun-news-section" id="barun-news">
   <div class="container">
     <div class="head centered-head">
       <p class="label blue">BARUN NEWS</p>
       <h2 id="barun-news-title">바른미술학원이 만든 월간 신문</h2>
-      <p class="lead">제37호 바른신문 소식을 확인해보세요.</p>
+      <p class="lead">제38호 바른신문 소식을 확인해보세요.</p>
     </div>
-    <div class="barun-news-grid news-issue-37">
-      <figure><img src="assets/barun-news-01.png" alt="바른신문 제37호 표지" loading="lazy"/></figure>
-      <figure><img src="assets/barun-news-02.png" alt="바른신문 제37호 캠퍼스별 행사" loading="lazy"/></figure>
-      <figure><img src="assets/barun-news-03.png" alt="바른신문 제37호 선생님 소개와 교육 칼럼" loading="lazy"/></figure>
-      <figure><img src="assets/barun-news-04.png" alt="바른신문 제37호 선생님 칼럼" loading="lazy"/></figure>
-      <figure><img src="assets/barun-news-05.png" alt="바른신문 제37호 수상 소식" loading="lazy"/></figure>
-      <figure><img src="assets/barun-news-06.png" alt="바른신문 제37호 전시 소개 1" loading="lazy"/></figure>
-      <figure><img src="assets/barun-news-07.png" alt="바른신문 제37호 전시 소개 2와 추천 도서" loading="lazy"/></figure>
+    <div class="barun-news-grid news-issue-38">
+      <figure><img src="assets/barun-news-38-01.jpg" alt="바른신문 제38호 표지" loading="lazy"/></figure>
+      <figure><img src="assets/barun-news-38-02.jpg" alt="바른신문 제38호 캠퍼스 행사와 수상 소식" loading="lazy"/></figure>
+      <figure><img src="assets/barun-news-38-03.jpg" alt="바른신문 제38호 할로윈 이야기와 전시 소식" loading="lazy"/></figure>
+      <figure><img src="assets/barun-news-38-04.jpg" alt="바른신문 제38호 우수강사와 추천 도서" loading="lazy"/></figure>
     </div>
   </div>
 </section>
+
  </section> <section aria-labelledby="director-title" class="section sky" id="director"> <div class="container"> <div class="head"> <p class="label blue">원장 직강</p> <h2 id="director-title">예중·예고 입시 전문</h2> <p class="director-subtitle">압구정바른미술학원 정성훈 원장</p> <p class="lead">입시 경력 28년, 학생별 맞춤 지도</p> </div> <div class="director-name-card"><span>원장</span>정성훈 원장</div> <div class="director-box"> <figure class="photo-card"><img alt="압구정바른미술학원 부산대연캠퍼스 정성훈 원장" loading="lazy" src="assets/director-main.jpg"/></figure> <div class="card"> <h3>예중·예고 입시 지도</h3> <div class="feature-list"> <div class="feature"><i>1</i><div><b>입시 경력 28년</b><p>예중·예고 준비 방향 안내</p></div></div> <div class="feature"><i>2</i><div><b>소수정예 맞춤 수업</b><p>학생별 1:1 피드백</p></div></div> <div class="feature"><i>3</i><div><b>취미미술부터 입시미술까지</b><p>목표에 맞춘 직접 지도</p></div></div> </div> </div> </div> </div>
 </section> <section aria-labelledby="standard-title" class="section" id="standard"> <div class="container"> <div class="head centered-head"> <p class="label blue">실기 기준</p> <h2 id="standard-title">원장이 직접 보여주는 입시 실기 기준</h2> </div> <figure class="photo-card standard-main-photo"> <img alt="주전자 1시간 공개시범작" loading="lazy" src="assets/director-drawing01.jpg"/> <figcaption>주전자 1시간 공개시범작</figcaption> </figure> <p class="standard-keywords">관찰력 · 형태감 · 명암 · 질감 표현<br/>원장직강 · 1:1 피드백</p> </div>
 </section> <section aria-labelledby="gifted-title" class="section orange" id="gifted"> <div class="container"> <div class="head centered-head"> <p class="label">영재교육원 준비</p> <h2 id="gifted-title">체계적인 부산대예술영재교육원 준비</h2> </div> <figure class="photo-card gifted-main-photo"> <img alt="부산대예술영재교육원 미술 전형 준비 안내 자료" loading="lazy" src="assets/gifted-info01.png"/> </figure> <p class="gifted-keywords" style="color:#111 !important;">창의표현과 관찰표현 중심 교육</p> </div>
